@@ -1,7 +1,7 @@
 {
-  "name": "fatsecret.js",
+  "name": "fatsecret",
   "version": "1.0.9",
-  "description": "Fatsecret.js is an unofficial API wrapper for the FatSecret nutrition database.",
+  "description": "Fatsecret is an unofficial API wrapper for the FatSecret nutrition database.",
   "main": "./lib/main.js",
   "types": "./lib/main.d.ts",
   "devDependencies": {
@@ -28,15 +28,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/IDontLua/fatsecret.js.git"
+    "url": "git+https://github.com/muezz/fatsecret.git"
   },
   "keywords": [],
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/IDontLua/fatsecret.js/issues"
+    "url": "https://github.com/muezz/fatsecret/issues"
   },
-  "homepage": "https://github.com/IDontLua/fatsecret.js#readme",
+  "homepage": "https://github.com/muezz/fatsecret#readme",
   "files": [
     "lib/**/*"
   ],
