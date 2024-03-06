@@ -1,14 +1,14 @@
-import * as math from "mathjs";
+import { createUnit } from "mathjs";
 
-import { Client } from "./client/Client"
-import { APIErrorCode } from "./client/APIError"
-import Food from "./structures/Food";
+import { APIErrorCode } from "./client/APIError";
+import { Client } from "./client/Client";
 import BarcodedFood from "./structures/BarcodeFood";
+import Food from "./structures/Food";
 import FoodSearchResults from "./structures/FoodSearchResults";
 import Serving from "./structures/Serving";
 
 // define the calorie
-math.createUnit({
+createUnit({
     calorie: {
         definition: "4.184J",
         prefixes: "short",
@@ -27,11 +27,6 @@ export default {
 }
 
 export {
-    Client,
-    APIErrorCode,
-
-    Food,
-    BarcodedFood,
-    FoodSearchResults,
+    APIErrorCode, BarcodedFood, Client, Food, FoodSearchResults,
     Serving
-}
+};
