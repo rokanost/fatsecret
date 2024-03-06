@@ -1,7 +1,5 @@
-import Food from "../../structures/Food";
 import FoodSearchResults from "../../structures/FoodSearchResults";
-import { APIError, APIErrorCode } from "../APIError";
-import BaseClient from "../BaseClient"
+import BaseClient from "../BaseClient";
 
 export function getFoodSearchFactory(client: BaseClient) {
     // return function to send request
@@ -14,7 +12,7 @@ export function getFoodSearchFactory(client: BaseClient) {
     }) => {
         try {
             // send request
-            const response = await client.doRequest("foods.search", {
+            const response = await client.doRequest("foods.search.v2", {
                 search_expression: params.searchExpression,
                 page_number: params.pageNumber,
 
