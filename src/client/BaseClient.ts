@@ -9,6 +9,14 @@ interface ICredentials {
 
 export interface IOptions {
     credentials: ICredentials;
+    proxy?: {
+        host: string;
+        port: number;
+        auth?: {
+            username: string;
+            password: string;
+        };
+    };
 }
 
 export default class BaseClient {
@@ -23,7 +31,7 @@ export default class BaseClient {
         this.options = options;
 
         // create an axios client instance
-        this.axios = axios.create({});
+        this.axios = axios.create(options.proxy ?? {});
 
         // setup interceptor to handle refreshing token on error
         this.axios.interceptors.response.use(async response => {
